@@ -1,7 +1,0 @@
-"Web tech e shobai ekta crud applications submit koro, jetay minimum 5 ta data table thakbe and data visualization e minimum 3 ta query te multiple table theke data ashbe. Update delete insert eo same,  particular query te minimum 2 ta query multiple table e insert korbe.
-Frontend backend or particular framework hole hobe.
-
-Ami viva nibo submit er por check koreR single project"
-
-
-https://www.youtube.com/playlist?list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO
