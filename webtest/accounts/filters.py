@@ -14,3 +14,12 @@ class OrderFilter(django_filters.FilterSet):
         model = Order
         fields = '__all__'
         exclude = ['customer','date_created']
+
+
+class CustomerFilter(django_filters.FilterSet):
+
+
+
+    class Meta:
+        model = Customer
+        fields = '__all__'

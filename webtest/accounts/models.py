@@ -24,8 +24,8 @@ class Tag(models.Model):
 
 class Product(models.Model):
     CATEGORY = (
-                ('Indoor', 'Indoor'),
-                ('Out Door', 'Out Door'),
+                ('Veg', 'Veg'),
+                ('Non Veg', 'Non Veg'),
                 )
     name = models.CharField(max_length=200)
     price = models.FloatField(null = True)
