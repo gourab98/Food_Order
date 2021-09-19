@@ -34,6 +34,7 @@
           <th></th>
           <th>Customer</th>
           <th>Phone</th>
+          <th>Address</th>
         </tr>
 
         {% for customer in customers %}
@@ -41,6 +42,7 @@
            <td><a class="btn btn-sm btn-info" href="{% url 'customer' customer.id %}">View</a></td>
            <td>{{customer.name}}</td>
            <td>{{customer.phone}}</td>
+           <td>{{customer.address}}</td>
          </tr>
         {% endfor %}
 

@@ -19,6 +19,7 @@ class OrderFilter(django_filters.FilterSet):
 class CustomerFilter(django_filters.FilterSet):
     name = CharFilter(field_name ='name', lookup_expr='icontains')
     phone = CharFilter(field_name = 'phone', lookup_expr='icontains')
+    address = CharFilter(field_name= 'address', lookup_expr='icontains')
 
 
 
