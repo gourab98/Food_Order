@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from .models import *
-from .forms import OrderForm
+from .forms import OrderForm, CustomerForm
 from .filters import OrderFilter
 
 # Create your views here.
@@ -79,3 +79,19 @@ def deleteOrder(request, pk):
 
 	context = {'item':order}
 	return render(request, 'accounts/delete.html', context)
+
+
+def createCustomer(request):
+
+    form = CustomerForm()
+    if request.method == 'POST':
+        #print(request.POST)
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+
+    context = {'form': form}
+
+    return render(request, 'accounts/customer_form.html', context)
