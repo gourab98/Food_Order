@@ -15,9 +15,12 @@ def home(request):
     delivered = orders.filter(status='Delivered').count()
     pending = orders.filter(status='Pending').count()
 
+    myFilter = CustomerFilter(request.GET, queryset = customers)
+    customers = myFilter.qs
+
     context = {'orders':orders, 'customers':customers,
     'total_customers': total_customers, 'total_orders':total_orders,
-    'delivered': delivered, 'pending': pending}
+    'delivered': delivered, 'pending': pending, 'myFilter': myFilter}
 
     return render(request, 'accounts/dashboard.html',context)
 

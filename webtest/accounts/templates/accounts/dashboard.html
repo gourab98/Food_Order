@@ -57,7 +57,8 @@
         <tr>
           <th>Customer</th>
           <th>Product</th>
-          <th>Date Ordered</th>
+          <th>Price</th>
+          <!-- <th>Date Ordered</th> -->
           <th>Status</th>
           <th>Update</th>
           <th>Remove</th>
@@ -67,7 +68,8 @@
          <tr>
            <td>{{order.customer}}</td>
            <td>{{order.product}}</td>
-           <td>{{order.date_created}}</td>
+           <td>{{order.product.price}}</td>
+           <!-- <td>{{order.date_created}}</td> -->
            <td>{{order.status}}</td>
            <td><a  class="btn btn-sm btn-info"  href="{% url 'update_order' order.id %}">Update</a></td>
            <td><a  class="btn btn-sm btn-danger"  href="{% url 'delete_order' order.id %}">Delete</a></td>

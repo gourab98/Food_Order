@@ -10,9 +10,8 @@
   <div class="card card-body">
     <h4>Customer: {{customer.name}}</h4>
     <hr>
-    <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>
     <a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'create_order' customer.id %}">Place Order</a>
-
+    <hr>
   </div>
 </div>
 
@@ -32,6 +31,7 @@
     <h1 style="text-align: center;padding: 10px">{{order_count}}</h1>
   </div>
 </div>
+
 </div>
 
 
@@ -59,6 +59,7 @@
         <th>Product</th>
         <th>Note</th>
         <th>Category</th>
+        <th>Price</th>
         <th>Date Orderd</th>
         <th>Status</th>
         <th>Update</th>
@@ -70,6 +71,7 @@
         <td>{{order.product}}</td>
         <td>{{order.note}}</td>
         <td>{{order.product.category}}</td>
+        <td>{{order.product.price}}</td>
         <td>{{order.date_created}}</td>
         <td>{{order.status}}</td>
         <td><a  class="btn btn-sm btn-info"  href="{% url 'update_order' order.id %}">Update</a></td>
