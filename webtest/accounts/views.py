@@ -44,7 +44,7 @@ def customer(request, pk_test):
 
 
 def createOrder(request, pk):
-	OrderFormSet = inlineformset_factory(Customer, Order, fields=('product' ,'status', 'note'), extra=5)
+	OrderFormSet = inlineformset_factory(Customer, Order, fields=('product' ,'status'), extra=5)
 	customer = Customer.objects.get(id=pk)
 	formset = OrderFormSet(queryset=Order.objects.none(),instance=customer)
 	#form = OrderForm(initial={'customer':customer})
